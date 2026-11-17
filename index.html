@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>home-server-backup</title>
+<style>
+  :root { color-scheme: light dark; --text: #1f2328; --muted: #59636e; --bg: #ffffff; --link: #0969da; }
+  @media (prefers-color-scheme: dark) { :root { --text: #e6edf3; --muted: #9198a1; --bg: #0d1117; --link: #4493f8; } }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem; }
+  h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  a { color: var(--link); }
+</style>
+</head>
+<body>
+<main>
+  <h1>home-server-backup</h1>
+
+  <p>home-server-backup is a private Google login app (an OAuth client). It lets the backup program
+  <a href="https://rclone.org/">rclone</a> on one home server copy encrypted backup files into its owner's Google Drive.</p>
+
+  <p>Only the owner of this app uses it, with the owner's own Google account. It is not a public service,
+  and it accepts no other users.</p>
+
+  <h2>What the app can access</h2>
+  <ul>
+    <li>Google Drive with the scope <code>drive.file</code> only. The app sees only the files that it created itself.
+    It cannot see, read or change any other file in the Drive.</li>
+    <li>No other Google data: no email, no contacts, no calendar, no profile data.</li>
+  </ul>
+
+  <h2>How the data is protected</h2>
+  <p>The server encrypts every backup before the upload. Google stores only encrypted files that it cannot read.</p>
+
+  <p><a href="privacy.html">Privacy policy</a></p>
+
+  <p class="muted">Last updated: 17 November 2026.</p>
+</main>
+</body>
+</html>
